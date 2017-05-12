@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"net"
-
-
 	"os"
 	"bufio"
 )
@@ -22,9 +20,6 @@ func CheckError(err error) {
 }
 
 func main() {
-
-
-
 	conn, err := net.Dial("udp", HOST+":"+PORT)
 	CheckError(err)
 
@@ -33,7 +28,7 @@ func main() {
 	for {
 
 		reader := bufio.NewReader(os.Stdin)   //lager ny reader
-		fmt.Print("Skriv melding her: ")
+		fmt.Print("Skriv til server: ")
 		text, _ := reader.ReadString('\n')
 		message := []byte(text)
 

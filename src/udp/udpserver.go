@@ -20,7 +20,7 @@ func CheckError(err error) {
 }
 
 func main() {
-
+	// forbereder tilkoblingen til port adressen
 	ServerAddr,err := net.ResolveUDPAddr("udp",":"+PORT)
 	CheckError(err)
 	// listen to incoming udp packets
@@ -35,7 +35,7 @@ func main() {
 		n,addr,err := ServerConn.ReadFromUDP(buffer)
 
 		// printer ut melding fra clienten
-		fmt.Println("Recieved ", string(buffer[0:n]), " from ", addr)
+		fmt.Println("Motatt melding: ", string(buffer[0:n]), " fra ", addr)
 		CheckError(err)
 	}
 }
