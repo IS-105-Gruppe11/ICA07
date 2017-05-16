@@ -9,7 +9,7 @@ import (
 
 const (
 	HOST = "127.0.0.1"
-	PORT = "49286"   // porten til ubuntu serveren
+	PORT = "8001"
 )
 
 
