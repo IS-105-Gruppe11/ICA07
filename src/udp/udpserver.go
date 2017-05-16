@@ -8,7 +8,7 @@ import (
 
 const (
 	HOST = "127.0.0.1"
-	PORT = "49286"
+	PORT = "8001"
 )
 
 /* A Simple function to verify error */
