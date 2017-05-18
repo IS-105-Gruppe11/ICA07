@@ -34,8 +34,13 @@ func main() {
 	for {
 		n,addr,err := ServerConn.ReadFromUDP(buffer)
 
+		melding := buffer[0:n]
+
+		//dekrypterer meldingen
+		dekryptert := dekrypter(melding)
+
 		// printer ut melding fra clienten
-		fmt.Println("Motatt melding: ", string(buffer[0:n]), " fra ", addr)
+		fmt.Println("Motatt melding: ", dekryptert, " fra ", addr)
 		CheckError(err)
 	}
 }

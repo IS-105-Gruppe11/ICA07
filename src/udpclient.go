@@ -29,11 +29,15 @@ func main() {
 
 		reader := bufio.NewReader(os.Stdin)   //lager ny reader
 		fmt.Print("Skriv til server: ")
-		text, _ := reader.ReadString('\n')
-		message := []byte(text)
+		tekst, _ := reader.ReadString('\n')
 
-		_, err = conn.Write(message)    //sender meldingen
+		//krypterer teksten
+		kryptert := krypter(tekst)
+		_, err = conn.Write(kryptert)    //sender meldingen
 		CheckError(err)
+		fmt.Println("Melding kryptert og sendt")
+
+
 	}
 }
 

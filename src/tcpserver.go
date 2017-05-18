@@ -43,11 +43,13 @@ func main() {
 func handleConnection(c net.Conn) {
 
 	for {
-		message, _ := bufio.NewReader(c).ReadString('\n')
-		// output message received
-		fmt.Print("Melding:", string(message))
 
+		melding, _ := bufio.NewReader(c).ReadString('\n')
+		// output message received
+		fmt.Print("Melding:", melding)
 	}
+
+
 
 }
 	
