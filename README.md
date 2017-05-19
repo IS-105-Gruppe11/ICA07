@@ -1,4 +1,22 @@
-# ICA07
+Kommentar: 
+Alle i gruppen deltok på ICAen, men Magnus Erdvik gjorde mest på ICA07 mens resten av gruppen fokuserte på å fikse andre ICAer.
+
+Deltakere:
+
+Erdvik, Magnus
+
+Lie, Eva Kristine
+
+Nguyen, Philip
+
+Tellefsen, Erlend Frøysnes
+
+Van Dijk, Richard
+
+Younas, Osman
+
+
+                                                   ICA07 - Gruppe 11
 Oppgave 1.
 
 a) Lag en UDP klient og en UDP tjener
