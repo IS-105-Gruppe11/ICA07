@@ -1,5 +1,5 @@
 Kommentar: 
-Alle i gruppen deltok på ICAen, men Magnus Erdvik gjorde mest på ICA07 mens resten av gruppen fokuserte på å fikse andre ICAer.
+- Alle i gruppen deltok på ICAen, men Magnus Erdvik gjorde mest på ICA07 mens resten av gruppen fokuserte på 2. utkast av de andre ICAene. Vi mente dette var den beste måten å fordele oppgavene på for å bli ferdig i tide. 
 
 Deltakere:
 
