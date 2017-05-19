@@ -20,7 +20,7 @@ Younas, Osman
 Oppgave 1.
 
 a) Lag en UDP klient og en UDP tjener
-- Se “udpclient.go” og “udpserver.go”. Kjøres ved å ha to terminaler der den ene er server og den andre er klient. Vi lagde en windows executables av programmene; udpclient.exe og udpserver.exe ("./udpclient" og "./udpserver" i terminalen). Eventuelt kan programmene kjøres med kommando "go run udpserver.go kryptering.go" og "go run udpclient.go kryptering.go". Implementasjon av kryptering er gjort i en senere oppgave og må dermed være med for å kjøre prgrogrammene. 
+- Se “udpclient.go” og “udpserver.go”. Kjøres ved å ha to terminaler der den ene er server og den andre er klient. Programmene kjøres med kommando "go run udpserver.go kryptering.go" og "go run udpclient.go kryptering.go". Implementasjon av kryptering er gjort i en senere oppgave og må dermed være med for å kjøre prgrogrammene. 
 
 b) Send over “hemmelig” melding “Møte Fr 5.5 14:45 Flåklypa”. 
 - klient: http://imgur.com/Ea9Xiha
