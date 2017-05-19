@@ -20,10 +20,10 @@ func CheckError(err error) {
 }
 
 func main() {
-	// forbereder tilkoblingen til port adressen
+	// Forbereder tilkoblingen til port adressen
 	ServerAddr,err := net.ResolveUDPAddr("udp",":"+PORT)
 	CheckError(err)
-	// listen to incoming udp packets
+	// Hører etter udp pakker
 	ServerConn, err := net.ListenUDP("udp", ServerAddr )
 	CheckError(err)
 	defer ServerConn.Close()
@@ -31,15 +31,19 @@ func main() {
 	// reader for serveren
 	buffer := make([]byte, 1024)
 
+	fmt.Println("Server igang og klar til bruk...")
+
+	//En loop som tar imot udp pakker
 	for {
 		n,addr,err := ServerConn.ReadFromUDP(buffer)
 
+		//konverterer byteslicene til string
 		melding := buffer[0:n]
 
 		//dekrypterer meldingen
 		dekryptert := dekrypter(melding)
 
-		// printer ut melding fra clienten
+		// printer ut melding fra klienten
 		fmt.Println("Motatt melding: ", dekryptert, " fra ", addr)
 		CheckError(err)
 	}

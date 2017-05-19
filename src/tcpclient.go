@@ -20,20 +20,23 @@ func CheckError(err error) {
 }
 
 func main() {
-
+	//Kobler opp til serveren
 	conn, err := net.Dial("tcp", HOST+":"+PORT)
 	CheckError(err)
 
 	defer conn.Close()
 
 	for {
-
-		reader := bufio.NewReader(os.Stdin)   //lager ny reader
+		//lager ny reader
+		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("Skriv melding her: ")
 		text, _ := reader.ReadString('\n')
+
+		//Gjør meldingen om til byteslice
 		message := []byte(text)
 
-		_, err = conn.Write(message)    //sender meldingen
+		//sender meldingen
+		_, err = conn.Write(message)
 		CheckError(err)
 	}
 }

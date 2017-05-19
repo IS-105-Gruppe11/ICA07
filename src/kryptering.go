@@ -8,9 +8,9 @@ import (
 )
 
 const (
-	PASSWORD = "6368616e676520746869732070617373776f726420746f206120736563726574"
+	PASSWORD = "3571466f198420646869732000117373766e3264207461296120736563726575"
 )
-
+// funksjon for kryptering
 func krypter(message string) []byte {
 
 	secretKeyBytes, err := hex.DecodeString(PASSWORD)
@@ -25,11 +25,11 @@ func krypter(message string) []byte {
 	if _, err := io.ReadFull(rand.Reader, nonce[:]); err != nil {
 		panic(err)
 	}
-	// Encrypt the message
+	// krypterer meldingen
 	encrypted := secretbox.Seal(nonce[:], []byte(message), &nonce, &secretKey)
 	return encrypted
 }
-//
+//funksjon for dekryptering
 func dekrypter(encrypted []byte) string  {
 
 	secretKeyBytes, err := hex.DecodeString(PASSWORD)

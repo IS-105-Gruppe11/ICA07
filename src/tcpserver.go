@@ -21,17 +21,18 @@ func CheckError(err error) {
 }
 
 func main() {
-
+	//Forbereder tilkobling til port ardressen
 	ServerAddr,err := net.ResolveTCPAddr("tcp",":"+PORT)
 	CheckError(err)
-	// listen to incoming udp packets
+
+	// Hører etter tcp pakker
 	ServerConn, err := net.ListenTCP("tcp", ServerAddr )
 	CheckError(err)
 	defer ServerConn.Close()
 	CheckError(err)
 
 	for {
-		//accept connections using Listener.Accept()
+		//Akstepterer tilkoblingen fra klient
 		c, err := ServerConn.Accept()
 		CheckError(err)
 
@@ -45,7 +46,7 @@ func handleConnection(c net.Conn) {
 	for {
 
 		melding, _ := bufio.NewReader(c).ReadString('\n')
-		// output message received
+		// printer ut melding fra klient
 		fmt.Print("Melding:", melding)
 	}
 
